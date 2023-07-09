@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Masuk</title>
+	<title>Daftar</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="<?= routeTo('assets/img/main-logo.png')?>" type="image/x-icon"/>
 
@@ -17,6 +17,11 @@
 			}
 		});
 	</script>
+    <style>
+        span{
+            font-size: x-small;
+        }
+    </style>
 
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="<?=routeTo('assets/css/bootstrap.min.css')?>">
@@ -27,31 +32,37 @@
         <div class="row mt-4">
             <div class="col-sm-12 col-md-6 col-lg-4 mx-auto">
                 <div class="card full-height">
-                    <?php if($success_msg): ?>
-                    <div class="alert alert-success"><?=$success_msg?></div>
-                    <?php endif ?>
-    
-                    <?php if($error_msg): ?>
-                    <div class="alert alert-danger"><?=$error_msg?></div>
-                    <?php endif ?>
+                   
                     <div class="card-body">
                         <center>
                             <img src="<?=routeTo('assets/img/main-logo.png')?>" width="150px" height="100px" alt="logo" style="object-fit:contain;">
                         </center>
-                        <div class="card-title text-center">Login Form</div>
-                        <div class="card-category text-center">Masukkan Username dan Password anda pada bidang di bawah ini.</div>
+                        <div class="card-title text-center">Registration Form</div>
+                        <div class="card-category text-center">Masukkan Nama, Username dan Password anda pada bidang di bawah ini.</div>
 
                         <form action="" method="post">
                             <div class="form-group">
-                                <label for="">Username</label>
-                                <input type="text" name="username" id="" class="form-control mb-2" placeholder="Nama Pengguna Disini...">
-                                <label for="">Password</label>
+                                <label for="">Jenis Registration</label>
+                                <select name="jenis_user" class="form-control mb-2" id="jenis_user">
+                                    <option value="">Pilih</option>
+                                    <option value="team">Team</option>
+                                    <option value="tournament">Tournament</option>
+                                </select>
+
+
+                                <label for="">Nama Team</label>
+                                <input type="text" name="name" id="" class="form-control mb-2" placeholder="Nama Disini...">
+                               
+                                <label for="">Username </label> <span class="text-bold"> (Tanpa spasi)</span>
+                                <input type="text" name="username" id="" class="form-control mb-2" placeholder="Username Disini...">
+                                
+                                <label for="">Kata Sandi</label>
                                 <input type="password" name="password" id="" class="form-control mb-2" placeholder="Kata Sandi Disini...">
+                                
                                 <button class="btn btn-primary btn-block btn-round">Masuk</button>
                             </div>
                         </form>
-                        <p class="text-center">Belum punya akun ? <a href="<?=routeTo('auth/registration')?>">Daftar disini</a></p>
-                       
+                        
                     </div>
                 </div>
             </div>

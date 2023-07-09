@@ -1,7 +1,7 @@
 <?php
 
 $auth = auth();
-if(!isset($auth->user) && !in_array($route, ['auth/login','installation']))
+if(!isset($auth->user) && !in_array($route, ['auth/login', 'auth/registration','installation']))
 {
     header("location:".routeTo('auth/login'));
     die();

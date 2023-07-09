@@ -19,6 +19,10 @@ if(request() == 'POST')
 
     $insert = $db->insert($table,$_POST[$table]);
 
+    // echo '<pre>';
+    // print_r($_FILES);
+    // die;
+
     if(file_exists('../actions/'.$table.'/after-insert.php'))
         require '../actions/'.$table.'/after-insert.php';
 
