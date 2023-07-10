@@ -13,10 +13,6 @@ if(isset($_FILES['logo']['name']) && $_FILES['logo']['name']){
     $_POST['teams']['logo'] = $uploadFile;
 }
 
-
-$conn = conn();
-$db   = new Database($conn);
-
 // Insert user role
 $_POST['user_roles']['user_id'] = auth()->user->id;
 $_POST['user_roles']['role_id'] = 3;

@@ -14,11 +14,11 @@ return [
             'type'  => 'text'
         ],
         'phone' => [
-            'label' => 'No.Hp',
+            'label' => 'No. Hp',
             'type' => 'text'
         ],
         'logo' => [
-            'label' => 'Logo Teams',
+            'label' => 'Logo',
             'type' => 'file'
         ]
     ],
@@ -79,7 +79,7 @@ return [
     ],
     'tournament_group_team' => [
         'group_id' => [
-            'label' => 'Nama Grub',
+            'label' => 'Nama Grup',
             'type' => 'options-obj:tournament_group,id,name'
         ],
         'team_id' => [
@@ -137,41 +137,41 @@ return [
             'type' => 'options-obj:tournaments,id,name'
         ],
         'group_id' => [
-            'label' => 'Nama Grub',
+            'label' => 'Nama Grup',
             'type' => 'options-obj:tournament_group,id,name'
         ],
         'team_home_id' => [
-            'label' => 'Team Tuan Rumah',
+            'label' => 'Tim Home',
             'type'  => 'options-obj:teams,id,name'
         ],
         'team_away_id' => [
-            'label' => 'Team Tamu',
+            'label' => 'Tim Away',
             'type'  => 'options-obj:teams,id,name'
         ],
-        'score_home' => [
-            'label' => 'Score Home',
-            'type'  => 'text'
-        ],
-        'score_away' => [
-            'label' => 'Score Away',
-            'type'  => 'text'
-        ],
-        'match_status' => [
-            'label' => 'Status Pertandingan',
-            'type'  => 'options:HT|FT|ET|AET'
-        ],
+        // 'score_home' => [
+        //     'label' => 'Score Home',
+        //     'type'  => 'text'
+        // ],
+        // 'score_away' => [
+        //     'label' => 'Score Away',
+        //     'type'  => 'text'
+        // ],
+        // 'match_status' => [
+        //     'label' => 'Status Pertandingan',
+        //     'type'  => 'options:HT|FT|ET|AET'
+        // ],
         'schedule_at' => [
             'label' => 'Jadwal',
-            'type'  => 'date'
+            'type'  => 'datetime-local'
         ],
-        'description' => [
-            'label' => 'Deskripsi',
-            'type'  => 'text'
-        ],
-        'match_log' => [
-            'label' => 'Pertandingan',
-            'type'  => 'JSON'
-        ],
+        // 'description' => [
+        //     'label' => 'Deskripsi',
+        //     'type'  => 'text'
+        // ],
+        // 'match_log' => [
+        //     'label' => 'Pertandingan',
+        //     'type'  => 'JSON'
+        // ],
         'venue' => [
             'label' => 'Lokasi',
             'type'  => 'text'

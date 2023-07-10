@@ -4,11 +4,11 @@
             <div class="page-inner py-5">
                 <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
                     <div>
-                        <h2 class="text-white pb-2 fw-bold">Team</h2>
-                        <h5 class="text-white op-7 mb-2">Memanajemen data team</h5>
+                        <h2 class="text-white pb-2 fw-bold"><?=__('Team')?></h2>
+                        <h5 class="text-white op-7 mb-2">Memanajemen data <?=__('team')?></h5>
                     </div>
                     <div class="ml-md-auto py-2 py-md-0">
-                        <a href="<?=routeTo('teams/create')?>" class="btn btn-secondary btn-round">Buat Team</a>
+                        <a href="<?=routeTo('teams/create')?>" class="btn btn-secondary btn-round">Buat <?=__('Team')?></a>
                     </div>
                 </div>
             </div>
@@ -38,10 +38,10 @@
                                     <thead>
                                         <tr>
                                             <th width="20px">#</th>
-                                            <th>Nama Team</th>
+                                            <th>Nama Tim</th>
                                             <th>Alamat</th>
                                             <th>No Hp</th>
-                                            <th>Logo Teams</th>
+                                            <th>Logo</th>
                                             <th class="text-right">
                                             </th>
                                         </tr>
