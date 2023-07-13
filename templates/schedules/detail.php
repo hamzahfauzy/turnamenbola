@@ -21,7 +21,7 @@
 	<!-- CSS Files -->
 	<link rel="stylesheet" href="<?=asset('assets/css/bootstrap.min.css')?>">
     <style>
-        .flex-even {
+        .flex-even, .flex-1 {
             flex: 1;
         }
     </style>
