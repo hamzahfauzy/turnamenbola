@@ -13,6 +13,11 @@ switch ($data->match_status) {
         break;
 }
 ?>
+<style>
+    .flex-even {
+        flex: 1;
+    }
+</style>
 <div class="content">
     <div class="panel-header <?= config('theme')['panel_color'] ?>">
         <div class="page-inner py-5">
@@ -36,7 +41,8 @@ switch ($data->match_status) {
                     <h4><?= date("l, d F Y | H:i T", strtotime($data->schedule_at)) ?></h4>
 
                     <div class="d-flex justify-content-around align-items-center py-5">
-                        <div class="flex-1">
+                        <div class="flex-even">
+                            <img src="<?=asset($data->team_home_logo)?>" alt="<?= $data->team_home ?>" width="100px" height="100px" style="object-fit:contain">
                             <h2><?= $data->team_home ?></h2>
                             <?php if ($data->match_status != "Pertandingan Selesai") : ?>
                                 <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#event-home">Event</button>
@@ -83,13 +89,14 @@ switch ($data->match_status) {
                             </div>
                         </div>
 
-                        <div class="flex-1">
+                        <div class="flex-even">
                             <h2><span><?= $data->score_home ?></span> : <span><?= $data->score_away ?></span></h2>
                             <div class="badge badge-<?= $match_color ?> mx-auto mt-2"><?= count($recent_match_time_log) ? $recent_match_time_log[0]->value->status . " " . $data->match_status : '' ?></div>
 
                         </div>
 
-                        <div class="flex-1">
+                        <div class="flex-even">
+                            <img src="<?=asset($data->team_away_logo)?>" alt="<?= $data->team_away ?>" width="100px" height="100px" style="object-fit:contain">
                             <h2><?= $data->team_away ?></h2>
                             <?php if ($data->match_status != "Pertandingan Selesai") : ?>
                                 <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#event-away">Event</button>

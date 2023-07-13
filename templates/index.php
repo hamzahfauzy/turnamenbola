@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title>Z-Techno Boilerplate Landing Page</title>
+	<title>turnamenbola.id - Tempatnya turnamen bola terupdate</title>
 	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
 	<link rel="icon" href="<?=asset('assets/img/main-logo.png')?>" type="image/x-icon"/>
 
@@ -33,9 +33,9 @@
     <div class="centered">
         <center>
             <img src="<?=asset('assets/img/main-logo.png')?>" alt="" width="100px">
-            <h2>Selamat, Instalasi Z-Techno Boilerplate telah berhasil.</h2>
+            <h2>Selamat Datang di turnamenbola.id</h2>
             <br>
-            <a href="<?=routeTo('default/index')?>" class="btn btn-primary">Buka Panel Admin</a>
+            <a href="<?=routeTo('schedules/index')?>" class="btn btn-primary">Lihat Jadwal Pertandingan</a>
         </center>
     </div>
 </body>

@@ -4,6 +4,8 @@ $route = get_route();
 
 if(startWith($route,'app/db-')) return true;
 
+if(startWith($route,'schedules/')) return true;
+
 if(startWith($route,'api'))
 {
     return require 'api.php';
