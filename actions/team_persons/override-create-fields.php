@@ -19,6 +19,8 @@ $fields = array_merge($fields, [
     ],
 ]);
 
+unset($fields['tournament_id']);
+unset($fields['team_id']);
 unset($fields['person_id']);
 
 return $fields;

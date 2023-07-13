@@ -24,4 +24,6 @@ unset($_POST['team_persons']['gender']);
 unset($_POST['team_persons']['birthdate']);
 
 $person = $db->insert('persons', $person);
+$_POST['team_persons']['tournament_id'] = $_GET['tournament_id'];
+$_POST['team_persons']['team_id'] = $_GET['team_id'];
 $_POST['team_persons']['person_id'] = $person->id;

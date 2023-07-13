@@ -9,7 +9,8 @@
                     </div>
                     <div class="ml-md-auto py-2 py-md-0">
                         <?php if(is_allowed(get_route_path('crud/create',['table'=>$table]),auth()->user->id)): ?>
-                            <a href="<?=routeTo('crud/create',['table'=>$table])?>" class="btn btn-secondary btn-round">Buat <?=_ucwords(__($table))?></a>
+                            <?php unset($_GET['table']); $params = $_GET; ?>
+                            <a href="<?=routeTo('crud/create', $params)?>" class="btn btn-secondary btn-round">Buat <?=_ucwords(__($table))?></a>
                         <?php endif ?>
                     </div>
                 </div>
